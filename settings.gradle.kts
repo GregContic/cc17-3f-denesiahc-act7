@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Baguio Guide"
+rootProject.name = "LaTrinidad Guide"
 include(":app")
- 

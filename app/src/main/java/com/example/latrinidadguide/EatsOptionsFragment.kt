@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.content.res.Configuration
 
-class CulturalAttractionsFragment : Fragment() {
+class EatsOptionsFragment : Fragment() {
 
-    private lateinit var attractionAdapter: AttractionAdapter
-    private val viewModel: CulturalAttractionsViewModel by viewModels()
+    private lateinit var eatsAdapter: EatsAdapter
+    private val viewModel: EatsOptionsViewModel by viewModels()
     private var isTwoPane: Boolean = false
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -30,30 +30,30 @@ class CulturalAttractionsFragment : Fragment() {
 
         isTwoPane = view.findViewById<View?>(R.id.detail_container) != null
 
-        attractionAdapter = AttractionAdapter(emptyList()) { attraction ->
+        eatsAdapter = EatsAdapter(emptyList()) { dining ->
             if (isTwoPane) {
-                showDetailFragment(attraction)
+                showDetailFragment(dining)
             } else {
-                val action = CulturalAttractionsFragmentDirections.actionCulturalAttractionsToDetail(attraction)
+                val action = EatsOptionsFragmentDirections.actionDiningOptionsToDetail(dining)
                 findNavController().navigate(action)
             }
         }
 
-        recyclerView.adapter = attractionAdapter
+        recyclerView.adapter = eatsAdapter
 
-        viewModel.attractions.observe(viewLifecycleOwner) { attractions ->
-            attractionAdapter.updateAttractions(attractions)
-            if (isTwoPane && attractions.isNotEmpty()) {
-                showDetailFragment(attractions[0])
+        viewModel.eatsOptions.observe(viewLifecycleOwner) { diningOptions ->
+            eatsAdapter.updateDiningOptions(diningOptions)
+            if (isTwoPane && diningOptions.isNotEmpty()) {
+                showDetailFragment(diningOptions[0])
             }
         }
 
         return view
     }
 
-    private fun showDetailFragment(attraction: Attraction) {
+    private fun showDetailFragment(eats: Eats) {
         view?.findViewById<View>(R.id.detail_container)?.let {
-            val detailFragment = DetailFragment.newInstance(attraction)
+            val detailFragment = DetailFragment.newInstance(eats)
             childFragmentManager.beginTransaction()
                 .replace(R.id.detail_container, detailFragment)
                 .commit()

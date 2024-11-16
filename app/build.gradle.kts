@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.baguioguide"
+    namespace = "com.example.latrinidadguide"
     compileSdk = 34
 
     defaultConfig {
@@ -52,7 +52,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.android.material:material:1.9.0")
-    
+
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
