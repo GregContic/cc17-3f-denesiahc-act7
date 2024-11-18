@@ -32,14 +32,15 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="12dp"
             android:textAppearance="?attr/textAppearanceSubtitle1"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:maxLines="2"
             android:ellipsize="end"
             app:layout_constraintTop_toBottomOf="@id/itemImage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Item Title" />
+            tools:text="Item Title"
+			android:fontFamily="@font/arimasemibold"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

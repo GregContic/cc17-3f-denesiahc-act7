@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.latrinidadguide"
+    namespace = "com.example.latrinidadhighlights"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.baguioguide"
+        applicationId = "com.example.latrinidadhighlights"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+		>
 
         <ImageView
             android:id="@+id/detailImage"
@@ -28,11 +29,13 @@
             android:layout_marginTop="24dp"
             android:textAppearance="?attr/textAppearanceHeadline3"
             android:textStyle="bold"
-            android:textSize="32sp"
+            android:textSize="30sp"
             app:layout_constraintTop_toBottomOf="@id/detailImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Attraction Title" />
+            tools:text="Attraction Title"
+			android:fontFamily="@font/arimabold"
+			/>
 
         <TextView
             android:id="@+id/detailDescription"
@@ -40,11 +43,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:textSize="22sp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/detailTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Description of the attraction goes here. It can be multiple lines long and will wrap as needed." />
+            tools:text="Description of the attraction goes here. It can be multiple lines long and will wrap as needed."
+			android:fontFamily="@font/arimasemibold"
+			/>
 
         <TextView
             android:id="@+id/detailLocation"
@@ -52,11 +57,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/detailDescription"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Location: Sample Street, Baguio City" />
+            tools:text="Location: manights"
+			android:fontFamily="@font/arimasemibold"/>
 
         <TextView
             android:id="@+id/detailHours"
@@ -64,23 +70,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/detailLocation"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Hours: 9 AM - 5 PM" />
+            tools:text="Hours: 9 AM - 5 PM"
+			android:fontFamily="@font/arimasemibold"/>
 
         <TextView
-            android:id="@+id/timedet"
+            android:id="@+id/detailFee"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/detailHours"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Fee: Php 100" />
+            tools:text="LeBron James is da goat"
+			android:fontFamily="@font/arimasemibold"/>
 
         <TextView
             android:id="@+id/detailAdditionalInfo"
@@ -88,11 +96,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/timedet"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/detailFee"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Lebron james is the goat" />
+            tools:text="Additional information goes here"
+			android:fontFamily="@font/arimasemibold"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
